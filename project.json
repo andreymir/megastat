@@ -1,0 +1,24 @@
+{
+    "dependencies": {
+        "Microsoft.Net.Http": "2.2.29",
+        "Microsoft.Framework.ConfigurationModel": "1.0.0-beta4",
+        "Microsoft.Framework.ConfigurationModel.Json": "1.0.0-beta4",
+        "Newtonsoft.Json": "7.0.1-beta3"    
+    },
+    "commands": {
+        "ConsoleApp": "ConsoleApp"
+    },
+    "frameworks": {
+        "dnx451": {},
+        "dnxcore50": {
+            "dependencies": {
+                "System.Collections": "4.0.10-beta-22816",
+                "System.Console": "4.0.0-beta-22816",
+                "System.Globalization": "4.0.10-beta-22816",
+                "System.Net.Http": "4.0.0-beta-22816",
+                "System.Runtime": "4.0.20-beta-22816",
+                "System.Runtime.Extensions": "4.0.10-beta-22816"
+            }
+        }
+    }
+}
