@@ -56,7 +56,12 @@ namespace MegafonStats
                 Console.Write("Check authentication: ");
                 var url = new Uri(baseUrl, "auth/check");
                 url = new UriBuilder("http", url.Host, 80, url.AbsolutePath).Uri;
-                var authCheckResult = await http.GetAsync(url);
+                
+                var httpRequest = new HttpRequestMessage(HttpMethod.Get, url);
+                httpRequest.Headers.Remove("User-Agent");
+                httpRequest.Headers.Add("User-Agent", "MLK Android Phone 1.1.9");
+                
+                var authCheckResult = await http.SendAsync(httpRequest);
                 Console.WriteLine(await authCheckResult.Content.ReadAsStringAsync());
 
                 Console.Write("Login: ");
